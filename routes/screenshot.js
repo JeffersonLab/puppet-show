@@ -5,7 +5,7 @@ router = express.Router();
 
 router.get('/', function(req, res, next) {
         (async() => {
-            var url = req.query.url,
+            let url = req.query.url,
             type = req.query.type || 'png',
             quality = req.query.quality || null,
             fullPage = req.query.fullPage === 'true',
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
             clipHeight = req.query.clipHeight || null,
             omitBackground = req.query.omitBackground === 'true',
             encoding = req.query.encoding || 'binary',
-            media = req.query.emulateMedia || 'print',
+            media = req.query.emulateMediaType || 'print',
             ignoreHTTPSErrors = req.query.ignoreHTTPSErrors === 'true',
             filename = req.query.filename || null,
             waitUntil = req.query.waitUntil,
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
             viewportHeight = parseInt(viewportHeight);
             deviceScaleFactor = parseFloat(deviceScaleFactor);
             
-            var browser = await puppeteer.launch({ignoreHTTPSErrors: ignoreHTTPSErrors}),
+            let browser = await puppeteer.launch({ignoreHTTPSErrors: ignoreHTTPSErrors}),
                 page = await browser.newPage();
                 await page.setViewport({width: viewportWidth, height: viewportHeight, deviceScaleFactor: deviceScaleFactor});
 
@@ -40,9 +40,9 @@ router.get('/', function(req, res, next) {
                 await page.waitForSelector(waitForSelector);
             }
 
-            page.emulateMedia(media);
+            await page.emulateMediaType(media);
 
-            var options = {
+            let options = {
                 type: type,
                 fullPage: fullPage,
                 omitBackground: omitBackground,
@@ -57,9 +57,9 @@ router.get('/', function(req, res, next) {
                 options.clip = {x: parseFloat(clipX), y: parseFloat(clipY), width: parseFloat(clipWidth), height: parseFloat(clipHeight)};
             }
 
-            var buffer = await page.screenshot(options);
+            let buffer = await page.screenshot(options);
 
-            var mimeType = 'image/png';
+            let mimeType = 'image/png';
 
             if('jpeg' === type) {
                 mimeType = 'image/jpeg';

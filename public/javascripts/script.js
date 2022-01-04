@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         scale: '1',
         displayHeaderFooter: 'false',
         printBackground: 'false',
-        emulateMedia: 'print',
+        emulateMediaType: 'print',
         ignoreHTTPSErrors: 'false'
     };
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         deviceScaleFactor: '1',
         encoding: 'binary',
         omitBackground: 'true',
-        emulateMedia: 'print',
+        emulateMediaType: 'print',
         ignoreHTTPSErrors: 'false'
     };
 

@@ -5,7 +5,7 @@ router = express.Router();
 
 router.get('/', function(req, res, next) {
         (async() => {
-            var url = req.query.url,
+            let url = req.query.url,
             format = req.query.format || null,
             width = req.query.width || '8.5in',
             height = req.query.height || '11in',
@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
             headerTemplate = req.query.headerTemplate || null,
             footerTemplate = req.query.footerTemplate || null,
             scale = req.query.scale || 1.0,
-            media = req.query.emulateMedia || 'print',
+            media = req.query.emulateMediaType || 'print',
             pageRanges = req.query.pageRanges || '',
             ignoreHTTPSErrors = req.query.ignoreHTTPSErrors === 'true',
             filename = req.query.filename || null,
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
         scale = parseFloat(scale);
 
         try {
-            var browser = await puppeteer.launch({ignoreHTTPSErrors: ignoreHTTPSErrors}),
+            let browser = await puppeteer.launch({ignoreHTTPSErrors: ignoreHTTPSErrors}),
                 page = await browser.newPage();
 
             await page.goto(url, {waitUntil: waitUntil});
@@ -39,9 +39,9 @@ router.get('/', function(req, res, next) {
                 await page.waitForSelector(waitForSelector);
             }
 
-            page.emulateMedia(media);
+            await page.emulateMediaType(media);
 
-            var options = {
+            let options = {
                 printBackground: printBackground,
                 displayHeaderFooter: displayHeaderFooter,
                 landscape: landscape,
@@ -65,7 +65,7 @@ router.get('/', function(req, res, next) {
                 options.footerTemplate = footerTemplate;
             }
 
-            var buffer = await page.pdf(options);
+            let buffer = await page.pdf(options);
 
             res.setHeader('content-type', 'application/pdf');
 
