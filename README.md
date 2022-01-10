@@ -22,14 +22,14 @@ The URL parameter names for the web service end point __puppet-show/pdf__ and __
 
 **Note**: The default values match the puppeteer defaults and the only required parameter is "url".
 
-## Configure (Optional)
+## Configure
 ```bash
 export PORT=3000
 npm start
 ```
 **Note**: Use the appropriate set environment variable command for your shell; Bash shell shown above.  For C Shell use "setenv PORT 3000", and for Windows use "set PORT 3000". 
 
-## Docker (Optional)
+## Docker
 Build image yourself
 ```bash
 git clone https://github.com/slominskir/puppet-show
