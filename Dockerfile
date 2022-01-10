@@ -1,7 +1,6 @@
 # Inspired by: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
 
-
-FROM node:17-slim
+FROM node:lts-slim
 
 # Install latest chrome dev package and fonts to support major charsets (Chinese, Japanese, Arabic, Hebrew, Thai and a few others)
 # Note: this installs the necessary libs to make the bundled version of Chromium that Puppeteer
@@ -21,33 +20,23 @@ ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_x
 RUN chmod +x /usr/local/bin/dumb-init
 ENTRYPOINT ["dumb-init", "--"]
 
-# Uncomment to skip the chromium download when installing puppeteer. If you do,
-# you'll need to launch puppeteer with:
-#     browser.launch({executablePath: 'google-chrome-stable'})
-# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-
 RUN groupadd -r pptruser  \
     && useradd -r -g pptruser pptruser \
     && mkdir -p /home/pptruser/puppet-show \
     && chown -R pptruser:pptruser /home/pptruser
+
+# Corporate SSL proxy
+RUN npm config set strict-ssl false -g
 
 # Run everything after as non-privileged user.
 USER pptruser
 
 WORKDIR /home/pptruser/puppet-show
 
-#COPY package*.json ./
-
-#RUN npm config set strict-ssl false -g
-#RUN npm config set proxy http://jprox.jlab.org:8080
-#RUN npm config set https-proxy https://jprox.jlab.org:8081
 RUN npm install puppet-show
-
-#COPY . .
 
 EXPOSE 3000
 
-#CMD ["sleep", "infinity"]
-CMD ["npm", "start"]
+CMD ["node", "node_modules/puppet-show/bin/www"]
 
 # Now navigate web browser to http://localhost:3000/puppet-show/
