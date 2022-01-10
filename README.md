@@ -1,4 +1,4 @@
-# Puppet Show [![Build Status](https://travis-ci.com/slominskir/puppet-show.svg?branch=master)](https://travis-ci.com/slominskir/puppet-show) [![Docker](https://img.shields.io/docker/v/slominskir/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/slominskir/puppet-show)
+# Puppet Show [![Docker](https://img.shields.io/docker/v/slominskir/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/slominskir/puppet-show)
 Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to expose Chromium print-to-pdf and screenshot over a service
 
 ![Screenshot](https://cdn.rawgit.com/slominskir/puppet-show/master/Screenshot.png)
