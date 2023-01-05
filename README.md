@@ -1,3 +1,7 @@
+<p>
+<a href="#"><img align="right" width="100" height="100" src="https://raw.githubusercontent.com/slominskir/puppet-show/main/public/images/logo64x64.png"/></a>     
+</p>
+
 # Puppet Show [![Docker](https://img.shields.io/docker/v/slominskir/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/slominskir/puppet-show)
 Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to expose Chromium print-to-pdf and screenshot over a service
 
@@ -56,5 +60,3 @@ npm start
    - [Chrome Remote Control (DevTools) Protocol](https://chromedevtools.github.io/devtools-protocol/tot/Page#method-printToPDF)
    - [Puppetron](https://github.com/cheeaun/puppetron)
    - [URL-to-PDF-API](https://github.com/alvarcarto/url-to-pdf-api)
-
-> ![Logo](https://cdn.rawgit.com/slominskir/puppet-show/master/public/images/logo64x64.png)
