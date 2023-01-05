@@ -6,10 +6,10 @@ Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to 
 ---
 - [Overview](https://github.com/slominskir/puppet-show#overview)
 - [Quick Start with Compose](https://github.com/slominskir/puppet-show#quick-start-with-compose)
-- [Install](https://github.com/JeffersonLab/jaws-admin-gui#install)
+- [Install](https://github.com/slominskir/puppet-show#install)
 - [API](https://github.com/slominskir/puppet-show#api) 
 - [Configure](https://github.com/slominskir/puppet-show#configure)
-- [See Also](https://github.com/JeffersonLab/jaws-admin-gui#see-also)
+- [See Also](https://github.com/slominskir/puppet-showi#see-also)
 ---
 
 ## Overview
