@@ -1,6 +1,5 @@
 services:
   puppet:
-    image: jeffersonlab/puppet-show:latest
     hostname: puppet
     container_name: puppet
     ports:
