@@ -1,0 +1,14 @@
+name: CD
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'VERSION'
+    tags-ignore:
+      - '**'
+
+jobs:
+  release:
+    uses: jeffersonlab/nodejs-workflows/.github/workflows/gh-release.yaml@v1
+    secrets: inherit
