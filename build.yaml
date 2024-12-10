@@ -1,0 +1,8 @@
+services:
+  puppet:
+    extends:
+      file: compose.yaml
+      service: puppet
+    build:
+      context: .
+      dockerfile: Dockerfile

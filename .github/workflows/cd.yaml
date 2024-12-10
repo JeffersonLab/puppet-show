@@ -12,3 +12,11 @@ jobs:
   release:
     uses: jeffersonlab/nodejs-workflows/.github/workflows/gh-release.yaml@v1
     secrets: inherit
+
+  docker_publish:
+    needs:
+      - release
+    uses: jeffersonlab/container-workflows/.github/workflows/docker-publish.yaml@v2
+    with:
+      semvertag: ${{ needs.release.outputs.semvertag }}
+    secrets: inherit

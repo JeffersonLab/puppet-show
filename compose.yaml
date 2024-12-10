@@ -1,6 +1,6 @@
 services:
   puppet:
-    image: slominskir/puppet-show:2.1.1
+    image: jeffersonlab/puppet-show:latest
     hostname: puppet
     container_name: puppet
     ports:

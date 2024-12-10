@@ -1,0 +1,3 @@
+services:
+  puppet:
+    image: jeffersonlab/puppet-show:latest
