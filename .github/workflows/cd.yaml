@@ -13,6 +13,12 @@ jobs:
     uses: jeffersonlab/nodejs-workflows/.github/workflows/gh-release.yaml@v1
     secrets: inherit
 
+  npm_publish:
+    needs:
+      - release
+    uses: jeffersonlab/nodejs-workflows/.github/workflows/npm-publish.yaml@v1
+    secrets: inherit
+
   docker_publish:
     needs:
       - release
