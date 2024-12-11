@@ -2,18 +2,18 @@
 <a href="#"><img align="right" width="100" height="100" src="https://raw.githubusercontent.com/slominskir/puppet-show/main/public/images/logo64x64.png"/></a>     
 </p>
 
-# Puppet Show [![Docker](https://img.shields.io/docker/v/slominskir/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/slominskir/puppet-show)
+# Puppet Show [![Docker](https://img.shields.io/docker/v/jeffersonlab/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/jeffersonlab/puppet-show)
 Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to expose Chromium print-to-pdf and screenshot over a service
 
-![Screenshot](https://cdn.rawgit.com/slominskir/puppet-show/master/Screenshot.png)
+![Screenshot](https://cdn.rawgit.com/jeffersonlab/puppet-show/master/Screenshot.png)
 
 ---
-- [Overview](https://github.com/slominskir/puppet-show#overview)
-- [Quick Start with Compose](https://github.com/slominskir/puppet-show#quick-start-with-compose)
-- [Install](https://github.com/slominskir/puppet-show#install)
-- [API](https://github.com/slominskir/puppet-show#api) 
-- [Configure](https://github.com/slominskir/puppet-show#configure)
-- [See Also](https://github.com/slominskir/puppet-showi#see-also)
+- [Overview](https://github.com/jeffersonlab/puppet-show#overview)
+- [Quick Start with Compose](https://github.com/jeffersonlab/puppet-show#quick-start-with-compose)
+- [Install](https://github.com/jeffersonlab/puppet-show#install)
+- [API](https://github.com/jeffersonlab/puppet-show#api) 
+- [Configure](https://github.com/jeffersonlab/puppet-show#configure)
+- [See Also](https://github.com/jeffersonlab/puppet-showi#see-also)
 ---
 
 ## Overview
@@ -22,7 +22,7 @@ Use this web service to programatically convert web pages to PDF or image.  For 
 ## Quick Start with Compose
 1. Grab project
 ```
-git clone https://github.com/slominskir/puppet-show
+git clone https://github.com/jeffersonlab/puppet-show
 cd puppet-show
 ```
 2. Launch [Compose](https://github.com/docker/compose)
@@ -56,7 +56,7 @@ npm start
 
 
 ## See Also
-   - [Puppet Show Wiki](https://github.com/slominskir/puppet-show/wiki)
+   - [Puppet Show Wiki](https://github.com/jeffersonlab/puppet-show/wiki)
    - [Chrome Remote Control (DevTools) Protocol](https://chromedevtools.github.io/devtools-protocol/tot/Page#method-printToPDF)
    - [Puppetron](https://github.com/cheeaun/puppetron)
    - [URL-to-PDF-API](https://github.com/alvarcarto/url-to-pdf-api)
