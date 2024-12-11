@@ -2,7 +2,7 @@
 <a href="#"><img align="right" width="100" height="100" src="https://raw.githubusercontent.com/slominskir/puppet-show/main/public/images/logo64x64.png"/></a>     
 </p>
 
-# Puppet Show [![Docker](https://img.shields.io/docker/v/jeffersonlab/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/jeffersonlab/puppet-show) ![NPM Version](https://img.shields.io/npm/v/puppet-show)
+# Puppet Show [![Docker](https://img.shields.io/docker/v/jeffersonlab/puppet-show?sort=semver&label=DockerHub)](https://hub.docker.com/r/jeffersonlab/puppet-show) [![NPM Version](https://img.shields.io/npm/v/puppet-show)](https://www.npmjs.com/package/puppet-show)
 Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to expose Chromium print-to-pdf and screenshot over a service
 
 ![Screenshot](https://cdn.rawgit.com/jeffersonlab/puppet-show/master/Screenshot.png)
