@@ -2,7 +2,7 @@
   "name": "puppet-show",
   "description": "Print-to-PDF and Screenshot web service",
   "homepage": "https://github.com/JeffersonLab/puppet-show",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "author": "Ryan Slominski <ryans@jlab.org>",
   "main": "bin/www",
