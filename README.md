@@ -13,6 +13,8 @@ Leverages the [Puppeteer](https://github.com/GoogleChrome/puppeteer) library to 
 - [Install](https://github.com/jeffersonlab/puppet-show#install)
 - [API](https://github.com/jeffersonlab/puppet-show#api) 
 - [Configure](https://github.com/jeffersonlab/puppet-show#configure)
+- [Release](https://github.com/jeffersonlab/puppet-show#release)
+- [Deploy](https://github.com/jeffersonlab/puppet-show#deploy) 
 - [See Also](https://github.com/jeffersonlab/puppet-showi#see-also)
 ---
 
@@ -54,6 +56,16 @@ npm start
 ```
 **Note**: Use the appropriate set environment variable command for your shell; Bash shell shown above.  For C Shell use "setenv PORT 3000", and for Windows use "set PORT 3000".
 
+## Release
+0. Bump the version number in package.json and the two instances in package-lock.json.
+1. Bump the version number in the VERSION file and commit and push to GitHub (using [Semantic Versioning](https://semver.org/)).
+2. The [CD](https://github.com/JeffersonLab/puppet-show/blob/main/.github/workflows/cd.yaml) GitHub Action should run automatically invoking:
+    - The [Create release](https://github.com/JeffersonLab/nodejs-workflows/blob/main/.github/workflows/gh-release.yaml) GitHub Action to tag the source and create release notes summarizing any pull requests.   Edit the release notes to add any missing details.
+    - The [Publish NPM]((https://github.com/JeffersonLab/nodejs-workflows/blob/main/.github/workflows/npm-publish.yaml) GitHub Action to create a deployment artifact on NPM.
+    - The [Publish docker image](https://github.com/JeffersonLab/container-workflows/blob/main/.github/workflows/docker-publish.yaml) GitHub Action to create a new demo Docker image.
+
+## Deploy
+The app is deployed at JLab on nodejs9.acc.jlab.org.
 
 ## See Also
    - [Puppet Show Wiki](https://github.com/jeffersonlab/puppet-show/wiki)
