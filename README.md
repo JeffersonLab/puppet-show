@@ -61,7 +61,7 @@ npm start
 1. Bump the version number in the VERSION file and commit and push to GitHub (using [Semantic Versioning](https://semver.org/)).
 2. The [CD](https://github.com/JeffersonLab/puppet-show/blob/main/.github/workflows/cd.yaml) GitHub Action should run automatically invoking:
     - The [Create release](https://github.com/JeffersonLab/nodejs-workflows/blob/main/.github/workflows/gh-release.yaml) GitHub Action to tag the source and create release notes summarizing any pull requests.   Edit the release notes to add any missing details.
-    - The [Publish NPM]((https://github.com/JeffersonLab/nodejs-workflows/blob/main/.github/workflows/npm-publish.yaml) GitHub Action to create a deployment artifact on NPM.
+    - The [Publish NPM](https://github.com/JeffersonLab/nodejs-workflows/blob/main/.github/workflows/npm-publish.yaml) GitHub Action to create a deployment artifact on NPM.
     - The [Publish docker image](https://github.com/JeffersonLab/container-workflows/blob/main/.github/workflows/docker-publish.yaml) GitHub Action to create a new demo Docker image.
 
 ## Deploy
